@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./app.css";
+import "./App.css";
 
 interface Coin {
   id: number;
@@ -136,7 +136,7 @@ function App() {
                   <div>
                     {coins.find((coin) => coin.id === item.coinId)?.name}
                   </div>
-                  <div>Coins owned: {item.amountOwned}</div>
+                  <div className="coins-owned">Coins owned: {item.amountOwned}</div>
                   <div className="amount-owned">
                     Market value:{" $"}
                     {item.amountOwned *
@@ -187,7 +187,7 @@ function App() {
                         }}
                       />
                     </div>
-                    <div>
+                    <div className="m-value">
                       = $
                       {(purchase.find((p) => p.coinId === coin.id)
                         ?.purchaseAmount || 0) * coin.price}
