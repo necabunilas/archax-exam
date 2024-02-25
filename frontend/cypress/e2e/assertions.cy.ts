@@ -1,10 +1,9 @@
-describe("Assertions spec", () => {
-
+context("Assertions spec", () => {
   beforeEach(() => {
-    cy.visit('http://127.0.0.1:5173/');
+    cy.visit("http://127.0.0.1:5173/"); //visit site before each test
     // Assuming the WebSocket connection initializes the coins array
     cy.wait(2000);
-  })
+  });
 
   it("assert that you begin with a $1000 USD balance", () => {
     cy.get(".inventory div").eq(1).should("have.text", "USD Balance: $1000");
@@ -15,7 +14,7 @@ describe("Assertions spec", () => {
     cy.get(".ticket-name").eq(1).should("have.text", "CoinB");
     cy.get(".ticket-name").eq(2).should("have.text", "CoinC");
     cy.get(".ticket-name").eq(3).should("have.text", "CoinD");
-    cy.get(".ticket-name").eq(4).should("not.exist");
+    cy.get(".ticket-name").eq(4).should("not.exist"); // another Coin ticket should not exit
   });
 
   it('assert "Coins owned" has incremented by the quantity you provided', () => {
