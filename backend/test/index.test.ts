@@ -37,12 +37,10 @@ describe("Check home path", () => {
 describe("Server endpoints and Web sockets", () => {
   before((done) => {
     server.listen(0, "localhost", done);
-    console.log("server running");
   });
 
   after((done) => {
     server.close(done);
-    console.log("server off");
   });
 
   it("Get coins endpoint", async () => {
@@ -65,12 +63,10 @@ describe("Server endpoints and Web sockets", () => {
 describe("WebSocket Server Testing", () => {
   before((done) => {
     server.listen(0, "localhost", done);
-    console.log("server running");
   });
 
   after((done) => {
     server.close(done);
-    console.log("server off");
   });
 
   it("Check CoinB price", async () => {
