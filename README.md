@@ -5,8 +5,6 @@ The file is in <b>frontend/cypress/e2e/assertions.cy.ts</b><br>
 To run cypress type in cmd: <b>npx cypress open</b><br>
 Choose test in electron to open the test file<br>
 
-<br>
-<br>
 
 ## backend testing using superwstest
 The file is in <b>backend/test/index.test.ts</b><br>
